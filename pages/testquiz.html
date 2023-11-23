@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quiz Application Using JavaScript</title>
+    <style>
+      .panel {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      .options {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="panel">
+      <h1>Quiz Application Using JavaScript</h1>
+      <div class="question" id="ques"></div>
+      <div class="options" id="opt"></div>
+      <button onclick="checkAns()" id="btn">SUBMIT</button>
+      <div id="score"></div>
+    </div>
+
+    <script>
+      const Questions = [
+        {
+          q: "What is a common goal in personal finance?",
+          a: [
+            { text: "Buying luxury items", isCorrect: false },
+            { text: "Saving for retirement", isCorrect: true },
+            { text: "Taking on more debt", isCorrect: false },
+            { text: "Spending all income immediately", isCorrect: false },
+          ],
+        },
+        {
+          q: "What is a common method to track expenses?",
+          a: [
+            { text: "Not tracking expenses at all", isCorrect: false },
+            { text: "Using a budgeting app", isCorrect: true },
+            { text: "Keeping all receipts in a box", isCorrect: false },
+            { text: "Guessing how much is spent", isCorrect: false },
+          ],
+        },
+        {
+          q: "What is an emergency fund used for?",
+          a: [
+            { text: "Vacation expenses", isCorrect: false },
+            { text: "Unexpected medical bills", isCorrect: true },
+            { text: "Buying new gadgets", isCorrect: false },
+            { text: "Eating out at restaurants", isCorrect: false },
+          ],
+        },
+      ];
+
+      let currQuestion = 0;
+      let score = 0;
+      let correctAnswers = 0;
+      let totalQuestions = 1;
+
+      function loadQues() {
+        const question = document.getElementById("ques");
+        const opt = document.getElementById("opt");
+
+        question.textContent = Questions[currQuestion].q;
+        opt.innerHTML = "";
+
+        for (let i = 0; i < Questions[currQuestion].a.length; i++) {
+          const choicesdiv = document.createElement("div");
+          const choice = document.createElement("input");
+          const choiceLabel = document.createElement("label");
+
+          choice.type = "radio";
+          choice.name = "answer";
+          choice.value = i;
+
+          choiceLabel.textContent = Questions[currQuestion].a[i].text;
+
+          choicesdiv.appendChild(choice);
+          choicesdiv.appendChild(choiceLabel);
+          opt.appendChild(choicesdiv);
+        }
+      }
+
+      loadQues();
+
+      function nextQuestion() {
+        if (currQuestion < Questions.length - 1) {
+          currQuestion++;
+          totalQuestions++;
+          loadQues();
+        } else {
+          document.getElementById("opt").remove();
+          document.getElementById("ques").remove();
+          document.getElementById("btn").remove();
+          loadScore();
+        }
+      }
+
+      function checkAns() {
+        const selectedAns = parseInt(document.querySelector('input[name="answer"]:checked').value);
+
+        if (Questions[currQuestion].a[selectedAns].isCorrect) {
+          score++;
+          correctAnswers++;
+          console.log("Correct");
+        }
+
+        nextQuestion();
+      }
+
+      function loadScore() {
+        const totalScore = document.getElementById("score");
+        totalScore.textContent = `You scored ${correctAnswers} out of ${totalQuestions}`;
+        const reload = document.createElement("button");
+        reload.textContent = "Reload";
+        totalScore.insertAdjacentElement("afterend", reload);
+        reload.addEventListener("click", () => window.location.reload());
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="assets/logo.png" />
+  </head>
+  <body>
+    <nav class="bg-white fixed w-full z-50 top-0 left-0 border-b shadow-sm">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="home.html" class="flex items-center">
+          <img src="assets/logo.png" class="w-10 mr-3" alt="sembuhgambling-logo" />
+          <span class="self-center text-2xl font-bold whitespace-nowrap hidden sm:block">Sembuh <span class="text-[#2EC4B6]">Gambling</span></span>
+        </a>
+        <div class="flex lg:order-2">
+          <a class="text-white bg-[#2EC4B6] hover:opacity-90 font-medium rounded-full text-sm px-5 py-3 text-center mr-3 md:mr-0 cursor-pointer" id="login-button" href="pages/login.html">LOGIN</a>
+          <a class="text-white bg-[#2EC4B6] hover:opacity-90 font-medium rounded-full text-sm px-5 py-3 text-center mr-3 md:mr-0 cursor-pointer hidden" id="profile-button" href="pages/profile.html">PROFIL</a>
+          <button
+            data-collapse-toggle="navbar-sticky"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="navbar-sticky"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+          </button>
+        </div>
+        <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="navbar-sticky">
+          <ul class="flex flex-col gap-4 lg:gap-0 p-4 lg:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 lg:bg-white">
+            <li>
+              <a
+                href="pages/game.html"
+                class="after:pb-2 relative text-[#2EC4B6] w-fit after:block after:content-[''] after:absolute after:border-b-4 after:border-[#2EC4B6] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-bottom-right after:hover:origin-bottom-left"
+              >
+                Game
+              </a>
+            </li>
+            <li>
+              <a
+                href="pages/penilaianDiri.html"
+                class="after:pb-2 relative text-[#2EC4B6] w-fit after:block after:content-[''] after:absolute after:border-b-4 after:border-[#2EC4B6] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-bottom-right after:hover:origin-bottom-left"
+              >
+                Penilaian Diri
+              </a>
+            </li>
+            <li>
+              <a
+                href="pages/konseling.html"
+                class="after:pb-2 relative text-[#2EC4B6] w-fit after:block after:content-[''] after:absolute after:border-b-4 after:border-[#2EC4B6] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-bottom-right after:hover:origin-bottom-left"
+              >
+                Konseling
+              </a>
+            </li>
+            <li>
+              <a
+                href="pages/artikel.html"
+                class="after:pb-2 relative text-[#2EC4B6] w-fit after:block after:content-[''] after:absolute after:border-b-4 after:border-[#2EC4B6] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-bottom-right after:hover:origin-bottom-left"
+              >
+                Artikel
+              </a>
+            </li>
+            <li>
+              <a
+                href="pages/komunitas.html"
+                class="after:pb-2 relative text-[#2EC4B6] w-fit after:block after:content-[''] after:absolute after:border-b-4 after:border-[#2EC4B6] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-bottom-right after:hover:origin-bottom-left"
+              >
+                Komunitas
+              </a>
+            </li>
+            <li>
+              <a
+                href="pages/tentangKami.html"
+                class="after:pb-2 relative text-[#2EC4B6] w-fit after:block after:content-[''] after:absolute after:border-b-4 after:border-[#2EC4B6] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-bottom-right after:hover:origin-bottom-left"
+              >
+                Tentang Kami
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="heroes" class="flex justify-center pt-24 min-h-screen">
+      <div id="" class="w-full p-6 max-w-[1080px] flex gap-7 justify-center flex-col lg:flex-row items-center">
+        <div class="order-2 lg:order-1 lg:w-3/5 flex justify-center flex-col gap-4">
+          <p class="text-[#222831]">
+            <p class="font-bold text-3xl md:text-4xl">Bebaskan Kecanduan Judi Anda dengan Satu Klik Bersama Kami</p>Buka pintu ke kehidupan baru tanpa judi, temukan dukungan, dan raih kesehatan mentalmu bersama Sembuh Gambling
+          </p>
+          <a href="pages/konseling.html" class="py-2 bg-[#2EC4B6] rounded-full text-white w-fit px-4 flex items-center justify-center font-semibold">Mulai Sekarang</a>
+        </div>
+        <div class="order-1 lg:order-2 w-full lg:w-2/5 flex gap-3 flex-col items-center lg:items-end">
+          <img src="assets/img-heroes.png" alt="img-heroes" class="w-[326px] h-[454px]">
+        </div>
+      </div>
+    </section>
+    
+    <section id="layanan" class="flex justify-center mt-28">
+      <div class="w-full max-w-[1080px] p-6">
+        <h1 class="text-3xl font-bold text-center">Layanan Sembuh Gambling</h1>
+        <div class="flex flex-col lg:flex-row gap-5 mt-10">
+          <div class="w-full lg:w-1/3 border-2 rounded-md flex justify-center items-center flex-col px-8 py-6 gap-3">
+            <img src="assets/img-layanan.png" alt="" class="w-2/3 md:w-1/4 lg:w-2/3">
+            <div class="text-center flex flex-col items-center gap-5">
+              <h1 class="text-2xl font-bold">Konseling Gratis</h1>
+              <p class="text-sm">Memberikan kesempatan bagi Anda untuk mendapatkan bantuan tanpa biaya pada sesi konseling pertama</p>
+              <a href="pages/konseling.html" class="w-fit py-2 px-4 rounded-full bg-[#2EC4B6] font-semibold text-white">Selengkapnya</a>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/3 border-2 rounded-md flex justify-center items-center flex-col px-8 py-6 gap-3">
+            <img src="assets/img-layanan.png" alt="" class="w-2/3 md:w-1/4 lg:w-2/3">
+            <div class="text-center flex flex-col items-center gap-5">
+              <h1 class="text-2xl font-bold">Konseling Online</h1>
+              <p class="text-sm">Konseling dimanapun dan kapanpun yang dengan siap membantu anda dengan lebih fleksibel</p>
+              <a href="pages/konseling.html" class="w-fit py-2 px-4 rounded-full bg-[#2EC4B6] font-semibold text-white">Selengkapnya</a>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/3 border-2 rounded-md flex justify-center items-center flex-col px-8 py-6 gap-3">
+            <img src="assets/img-layanan.png" alt="" class="w-2/3 md:w-1/4 lg:w-2/3">
+            <div class="text-center flex flex-col items-center gap-5">
+              <h1 class="text-2xl font-bold">Konseling Offline</h1>
+              <p class="text-sm">Konseling langsung tatap muka dengan psikolog untuk menciptakan suasana yang lebih dekat</p>
+              <a href="pages/konseling.html" class="w-fit py-2 px-4 rounded-full bg-[#2EC4B6] font-semibold text-white">Selengkapnya</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="alasan" class="flex justify-center mt-28">
+      <div class="w-full h-[350px] -z-50 absolute overflow-hidden object-cover">
+        <img src="assets/pattern-alasan.png" alt="" class="w-full h-full">
+      </div>
+      <div class="w-full max-w-[1080px] p-6">
+        <h1 class="text-3xl font-bold text-center text-white pt-20">Kenapa Harus Konseling Dengan Kami</h1>
+        <div class="flex flex-col lg:flex-row gap-5 mt-10">
+          <div class="w-full lg:w-1/4 border-2 rounded-md flex items-center flex-col px-8 py-6 bg-white">
+            <img src="assets/humanis.png" alt="" class="w-2/4 md:w-1/6 lg:w-1/3 rounded-md">
+            <div class="text-center flex flex-col items-center gap-5">
+              <h1 class="text-xl font-bold">Humanis</h1>
+              <p class="text-sm text-gray-500">Fitur Gamification yang dapat menunjukkan perkembangan karakter pribadi sehingga dapat termotivasi terus-menerus.</p>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/4 border-2 rounded-md flex items-center flex-col px-8 py-6 bg-white">
+            <img src="assets/Responsif.png" alt="" class="w-2/4 md:w-1/6 lg:w-1/3 rounded-md">
+            <div class="text-center flex flex-col items-center gap-5">
+              <h1 class="text-xl font-bold">Responsif</h1>
+              <p class="text-sm text-gray-500">Live chat realtime online bagi pengguna agar dapat memberikan keputusan lebih lanjut mengenai gejala yang dialami.</p>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/4 border-2 rounded-md flex items-center flex-col px-8 py-6 bg-white">
+            <img src="assets/Terpercaya.png" alt="" class="w-2/4 md:w-1/6 lg:w-1/3 rounded-md">
+            <div class="text-center flex flex-col items-center gap-5">
+              <h1 class="text-xl font-bold">Terpercaya</h1>
+              <p class="text-sm text-gray-500">Konsultasi dengan berbagai konselor yang siap mendengarkan untuk memastikan diagnosa dan ketepatan solusi.</p>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/4 border-2 rounded-md flex items-center flex-col px-8 py-6 bg-white">
+            <img src="assets/Terarah.png" alt="" class="w-2/4 md:w-1/6 lg:w-1/3 rounded-md">
+            <div class="text-center flex flex-col items-center gap-5">
+              <h1 class="text-xl font-bold">Terarah</h1>
+              <p class="text-sm text-gray-500">Fitur manajemen keuangan yang dapat membantu pengguna agar dapat mengatasi krisis keuangan yang tak terduga.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rekomendasi" class="flex justify-center mt-28">
+      <div class="w-full max-w-[1080px] p-6">
+        <h1 class="text-3xl font-bold text-center">Rekomendasi Psikolog Buat Kamu</h1>
+        <div id="psikolog-list-home" class="flex flex-col lg:flex-row gap-3 mt-10"></div>
+        <div class="flex justify-center w-full mt-8">
+          <a href="pages/konseling.html#cari-psikolog" class="py-2 px-4 rounded-full bg-white border border-[#2EC4B6] text-[#2EC4B6] font-semibold text-xl hover:bg-[#2EC4B6] hover:text-white transition-all duration-300">Lihat Semua</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="ulasan" class="flex justify-center mt-28">
+      <div class="w-full max-w-[1080px] p-6">
+        <div class="w-full lg:w-3/4 mx-auto">
+          <h1 class="text-3xl font-bold text-center leading-relaxed">Kata Mereka Yang Telah Berproses Bersama Sembuh Gambling</h1>
+        </div>
+        <div class="mx-auto mt-6">
+          <p class="text-xl text-center text-gray-500 font-semibold leading-10">
+            Kami berharap kamu juga bisa merasakan apa yang mereka rasakan.
+            <br>
+            <strong class="text-gray-700">Sekarang Giliranmu Untuk Berproses.</strong>
+          </p>
+          
+        </div>
+
+
+        <div>
+          <div class="flex">
+            <div class="w-2/12 flex items-center">
+              <div class="w-full text-right">
+                <button class="p-3 rounded-full bg-slate-200 mr-5" onclick="prev()">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div id="sliderContainer" class="w-10/12 overflow-hidden">
+              <ul id="slider" class="flex md:w-full duration-700">
+                <li class="p-5">
+                  <div class="p-5 border-2 rounded-md h-full">
+                    <div class="w-24 h-24 rounded-full bg-slate-200 flex justify-center items-center">
+                      <p class="text-3xl font-semibold">AB</p>
+                    </div>
+                    <div class="flex flex-col gap-3 mt-3">
+                      <h1 class="text-xl">AB</h1>
+                      <p>Layanan ABCD</p>
+                      <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore vitae quis soluta suscipit nulla doloribus aut."</p>
+                    </div>
+                </li>
+                <li class="p-5">
+                  <div class="p-5 border-2 rounded-md h-full">
+                    <div class="w-24 h-24 rounded-full bg-slate-200 flex justify-center items-center">
+                      <p class="text-3xl font-semibold">CD</p>
+                    </div>
+                    <div class="flex flex-col gap-3 mt-3">
+                      <h1 class="text-xl">CD</h1>
+                      <p>Layanan ABCD</p>
+                      <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore vitae quis soluta suscipit nulla doloribus aut."</p>
+                    </div>
+                </li>
+                <li class="p-5">
+                  <div class="p-5 border-2 rounded-md h-full">
+                    <div class="w-24 h-24 rounded-full bg-slate-200 flex justify-center items-center">
+                      <p class="text-3xl font-semibold">EF</p>
+                    </div>
+                    <div class="flex flex-col gap-3 mt-3">
+                      <h1 class="text-xl">EF</h1>
+                      <p>Layanan ABCD</p>
+                      <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore vitae quis soluta suscipit nulla doloribus aut."</p>
+                    </div>
+                </li>
+                <li class="p-5">
+                  <div class="p-5 border-2 rounded-md h-full">
+                    <div class="w-24 h-24 rounded-full bg-slate-200 flex justify-center items-center">
+                      <p class="text-3xl font-semibold">GH</p>
+                    </div>
+                    <div class="flex flex-col gap-3 mt-3">
+                      <h1 class="text-xl">GH</h1>
+                      <p>Layanan ABCD</p>
+                      <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore vitae quis soluta suscipit nulla doloribus aut."</p>
+                    </div>
+                </li>
+                <li class="p-5">
+                  <div class="p-5 border-2 rounded-md h-full">
+                    <div class="w-24 h-24 rounded-full bg-slate-200 flex justify-center items-center">
+                      <p class="text-3xl font-semibold">IJ</p>
+                    </div>
+                    <div class="flex flex-col gap-3 mt-3">
+                      <h1 class="text-xl">IJ</h1>
+                      <p>Layanan ABCD</p>
+                      <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore vitae quis soluta suscipit nulla doloribus aut."</p>
+                    </div>
+                </li>
+              </ul>
+            </div>
+            <div class="w-2/12 flex items-center">
+              <div class="w-full">
+                <button onclick="next()" class="p-3 rounded-full bg-slate-200 ml-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-[#2EC4B6] text-white border-t shadow-sm mt-28">
+      <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class="md:flex md:justify-between">
+          <div class="mb-6 md:mb-0">
+            <a href="home.html" class="flex items-center">
+              <img src="assets/logo.png" class="h-12 me-3" alt="sembuhgambling-logo" />
+              <span class="self-center text-2xl font-semibold whitespace-nowrap">Sembuh Gambling</span>
+            </a>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-white uppercase">Layanan Kami</h2>
+              <ul class="text-white font-medium">
+                <li class="mb-4">
+                  <a href="pages/game.html" class="hover:underline">Game</a>
+                </li>
+                <li class="mb-4">
+                  <a href="pages/penilaianDiri.html" class="hover:underline">Penilaian Diri</a>
+                </li>
+                <li class="mb-4">
+                  <a href="pages/konseling.html" class="hover:underline">Konseling</a>
+                </li>
+                <li class="mb-4">
+                  <a href="pages/artikel.html" class="hover:underline">Artikel</a>
+                </li>
+                <li class="mb-4">
+                  <a href="pages/komunitas.html" class="hover:underline">Komunitas</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-white uppercase">Ikuti Kami</h2>
+              <ul class="text-white font-medium">
+                <li class="mb-4">
+                  <a href="https://www.instagram.com/" target="_blank" class="hover:underline">Instagram</a>
+                </li>
+                <li class="mb-4">
+                  <a href="https://www.facebook.com/"  target="_blank" class="hover:underline">Facebook</a>
+                </li>
+                <li class="mb-4">
+                  <a href="https://www.twitter.com/" target="_blank" class="hover:underline">Twitter</a>
+                </li>
+                <li class="mb-4">
+                  <a href="https://www.youtube.com/" target="_blank" class="hover:underline">Youtube</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-white uppercase">Lainnya</h2>
+              <ul class="text-white font-medium">
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Kebijakan Privasi</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">Syarat &amp; Ketentuan</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm text-white sm:text-center">© 2023 DDAP SI-D Kelompok 3. All Rights Reserved. </span>
+        </div>
+      </div>
+    </footer>
+
+
+    <script>
+        let sliderContainer = document.getElementById("sliderContainer");
+        let slider = document.getElementById("slider");
+        let cards = slider.getElementsByTagName("li");
+
+        let elementsToShow = 2;
+        if (document.body.clientWidth < 1000) {
+          elementsToShow = 1;
+        }
+
+        let sliderContainerWidth = sliderContainer.clientWidth;
+        let cardWidth = sliderContainerWidth / elementsToShow;
+
+        slider.style.width = cards.length * cardWidth + "px";
+        slider.style.transition = 'margin';
+        slider.style.transitionDuration = '1s';
+
+        for (let index = 0; index < cards.length; index++) {
+          const element = cards[index];
+          element.style.width = cardWidth + "px";
+        }
+
+        function prev() {
+          let currentMargin = parseInt(slider.style.marginLeft) || 0;
+          let maxOffset = 0;
+
+          if (currentMargin < 0) {
+            slider.style.marginLeft = Math.min(currentMargin + cardWidth, maxOffset) + "px";
+          }
+        }
+
+        function next() {
+          let currentMargin = parseInt(slider.style.marginLeft) || 0;
+          let maxOffset = -cardWidth * (cards.length - elementsToShow);
+
+          if (currentMargin > maxOffset) {
+            slider.style.marginLeft = Math.max(currentMargin - cardWidth, maxOffset) + "px";
+          }
+        }
+    </script>
+    <script src="scripts/checkLogin.js"></script>
+    <script src="scripts/home.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
+  </body>
+</html>
