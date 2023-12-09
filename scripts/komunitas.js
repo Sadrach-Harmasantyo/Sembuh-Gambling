@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   imageInput.onchange = function () {
     const file = imageInput.files[0];
+
     if (file) {
       const reader = new FileReader();
 
