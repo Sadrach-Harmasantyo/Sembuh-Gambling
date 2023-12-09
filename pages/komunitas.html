@@ -87,12 +87,8 @@
 
       <section id="search" class="flex flex-col w-full items-center md:flex-row max-w-[1080px] gap-5 mt-10 p-6">
         <select id="filter" class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-[#2EC4B6] focus:border-[#2EC4B6] block w-full md:w-1/3 p-4">
-          <option selected>Trending</option>
-          <option>Judi Online</option>
-          <option>Konselor di Indonesia</option>
-          <option>Dampak Psikologis Judi</option>
-          <option>Simak! 5 Hal Berikut Penyebab Kecanduan Judi Online</option>
-          <option>Judi Bukanlah Jalan Pintas Menjadi Kaya Raya</option>
+          <option selected>Postingan Terlama</option>
+          <option>Postingan Terbaru</option>
         </select>
         <form class="w-full">
           <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
@@ -114,7 +110,29 @@
         </form>
       </section>
 
-      <section id="posting" class="max-w-[1080px] mt-10 w-full p-6">
+      <section id="trending" class="max-w-[1080px] w-full p-6">
+        <dl class="w-full text-gray-900 divide-y divide-gray-200 rounded-md border-2 p-5">
+          <h1 class="font-bold text-3xl pb-5">Trending</h1>
+          <div class="flex flex-col pb-3">
+            <dd class="font-semibold">Judi Online</dd>
+            <dt class="mb-1 text-gray-500">1rb postingan</dt>
+          </div>
+          <div class="flex flex-col py-3">
+            <dd class="font-semibold">Dampak Psikologis Judi</dd>
+            <dt class="mb-1 text-gray-500">500 postingan</dt>
+          </div>
+          <div class="flex flex-col pt-3">
+            <dd class="font-semibold">Penyebab Kecanduan Judi</dd>
+            <dt class="mb-1 text-gray-500">200 postingan</dt>
+          </div>
+          <div class="flex flex-col pt-3">
+            <dd class="font-semibold">Judi Bukan Jalan Pintas Untuk Menjadi Kaya</dd>
+            <dt class="mb-1 text-gray-500">100 postingan</dt>
+          </div>
+        </dl>
+      </section>
+
+      <section id="posting" class="max-w-[1080px] w-full p-6">
         <div class="border-2 rounded-md p-6 flex flex-col gap-5">
           <div class="flex flex-col md:flex-row gap-3 md:gap-0">
             <div class="w-full md:w-1/6 flex justify-center">
@@ -145,7 +163,7 @@
         </div>
       </section>
 
-      <section id="komunitas-list" class="max-w-[1080px] mt-10 flex flex-col gap-10 p-6">
+      <section id="komunitas-list" class="max-w-[1080px] flex flex-col gap-10 p-6">
         <div class="card p-6 border-2 rounded-md flex flex-col gap-5 w-full">
           <div class="w-full flex flex-col md:flex-row">
             <div class="w-full md:w-1/6 flex items-center">
