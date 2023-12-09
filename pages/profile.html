@@ -101,11 +101,21 @@
       </div>
 
       <h1 class="font-semibold text-2xl mt-11 mb-5">Perjalananmu</h1>
-      <div class="border rounded-xl shadow-md p-5 w-5/6 max-w-screen-lg font-bold">
-        <h1>Ahli Manajemen Keuangan, mendapat nilai bagus pada test penilaian diri</h1>
-        <br />
-        <br />
-        <h1>Bagus dalam menyibukkan diri, mencapai nilai tertinggi pada game</h1>
+      <div class="border rounded-xl shadow-md p-5 w-5/6 max-w-screen-lg">
+        <dl class="w-full text-gray-900 divide-y divide-gray-200">
+          <div class="flex flex-col pb-3">
+            <dd class="font-semibold">Ahli Manajemen Keuangan</dd>
+            <dt class="mb-1 text-gray-500">Mendapat skor maksimal pada tes manajemen keuangan</dt>
+          </div>
+          <div class="flex flex-col py-3">
+            <dd class="font-semibold">Bagus Dalam Menyibukkan Diri</dd>
+            <dt class="mb-1 text-gray-500">Menghabiskan banyak waktu pada GameBling</dt>
+          </div>
+          <div class="flex flex-col pt-3">
+            <dd class="font-semibold">Suka Berbagi Informasi</dd>
+            <dt class="mb-1 text-gray-500">Sering memposting informasi penting penting pada komunitas</dt>
+          </div>
+        </dl>
       </div>
     </div>
 
@@ -184,15 +194,9 @@
       const namaLengkap = document.querySelector(".nama");
       const email = document.querySelector(".email");
 
-      // Mengambil data dari local storage
       const userData = JSON.parse(localStorage.getItem("login"));
 
       if (userData) {
-        // Mengambil data nama dan email
-        // const nama = userData[0].nama;
-        // const email = userData[0].email;
-
-        // Sekarang Anda memiliki data "nama" dan "email" dari local storage
         console.log("Nama:", userData.nama);
         console.log("Email:", userData.email);
         namaLengkap.innerHTML = userData.nama;
