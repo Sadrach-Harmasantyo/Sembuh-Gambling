@@ -94,18 +94,36 @@ document.addEventListener("DOMContentLoaded", function (e) {
   const layanan = [
     {
       id: 1,
-      Judul: "Free-Counseling",
-      fasilitas: ["fasilitas a", "fasilitas b", "fasilitas c", "fasilitas d", "fasilitas e"],
+      Judul: "Konseling Individu",
+      fasilitas: [
+        "Psikolog rata-rata berusia 30 - 40 tahun",
+        "Pengalaman menjadi psikolog >3 tahun",
+        "Jumlah Klien yang ditangani berkisar 200+",
+        "Memberikan dukungan khusus untuk individu yang ingin membebaskan diri dari masalah perjudian, dengan pendekatan personal dan bimbingan profesional untuk mencapai kebebasan dari judi",
+        "Biaya <b>299.000 per sesi</b>",
+      ],
     },
     {
       id: 2,
-      Judul: "Counseling Online",
-      fasilitas: ["fasilitas a", "fasilitas b", "fasilitas c", "fasilitas d", "fasilitas e"],
+      Judul: "Konseling Keluarga",
+      fasilitas: [
+        "Psikolog rata-rata berusia 30 - 40 tahun",
+        "Pengalaman menjadi psikolog >3 tahun",
+        "Jumlah Klien yang ditangani berkisar 200+",
+        "Memberikan dukungan penuh untuk keluarga yang berjuang dengan dampak perjudian, membantu mereka pulih dengan fokus pada harmoni keluarga dan pemulihan dari judi.",
+        "Biaya <b>499.000 per sesi</b>",
+      ],
     },
     {
       id: 3,
-      Judul: "Counseling Offline",
-      fasilitas: ["fasilitas a", "fasilitas b", "fasilitas c", "fasilitas d", "fasilitas e"],
+      Judul: "Konseling Profesional",
+      fasilitas: [
+        "Psikolog rata-rata berusia 30 - 55 tahun",
+        "Pengalaman menjadi psikolog >8 tahun",
+        "Jumlah Klien yang ditangani berkisar 500+",
+        "Menyediakan dukungan holistik untuk membebaskan diri dari masalah perjudian, mencakup penanganan adiksi, gangguan klinis berat, serta membantu individu mencapai kesejahteraan dan kebebasan dari judi.",
+        "Biaya <b>699.000 per sesi</b>",
+      ],
     },
   ];
 
@@ -127,12 +145,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
             ${layananItem.fasilitas
               .map(
                 (fasilitas) => `
-                    <p class="text-gray-600 text-md">${fasilitas}</p>`
+                    <p class="text-gray-600 text-md">✅  ${fasilitas}</p>`
               )
               .join("")}
         </div>
         <div class="w-full flex justify-center md:justify-end mb-5 md:mb-0">
-            <a href="https://whatsapp.com" target="_blank" class="py-2 px-5 bg-[#2EC4B6] rounded-full text-white">Buat Jadwal Konseling</a>
+            <a href="https://whatsapp.com" target="_blank" class="py-2 px-5 bg-[#2EC4B6] rounded-full text-white font-semibold">Buat Jadwal Konseling</a>
         </div>
     </div>
   `;
