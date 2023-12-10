@@ -1,114 +1,64 @@
-if (!localStorage.getItem("login")) {
-  alert("Anda Belum Login");
-  window.location.assign("/pages/penilaianDiri.html");
-}
-
 const questions = [
   {
     id: 1,
-    question: "Apa pentingnya merencanakan anggaran keuangan pribadi?",
+    question: "Berapa persen dari gaji bulanan Anda yang biasanya dihabiskan untuk biaya hidup?",
     options: [
-      { text: "Tidak perlu merencanakan, uang selalu mencukupi", score: 0 },
-      { text: "Menghindari pemborosan dan memastikan kestabilan keuangan", score: 3 },
-      { text: "Anggaran hanya sesekali diperlukan", score: 1 },
-      { text: "Lebih baik mengandalkan pendapatan bulanan tanpa rencana", score: 0 },
+      { text: "Kurang dari 25%", score1: 25 },
+      { text: "Antara 25% - 50%", score1: 50 },
+      { text: "Antara 50% - 75%", score1: 75 },
+      { text: "Lebih dari 75%", score1: 100 },
     ],
   },
   {
     id: 2,
-    question: "Mengapa memiliki dana darurat sangat penting dalam manajemen keuangan?",
+    question: "Berapa persen dari gaji bulanan Anda yang biasanya dihabiskan untuk perjudian online?",
     options: [
-      { text: "Tidak perlu dana darurat, bisa mengandalkan pinjaman", score: 0 },
-      { text: "Melindungi dari keadaan darurat dan pengeluaran tak terduga", score: 3 },
-      { text: "Dana darurat hanya untuk kebutuhan mewah", score: 1 },
-      { text: "Dana darurat tidak relevan dalam manajemen keuangan", score: 0 },
+      { text: "Kurang dari 25%", score2: 25 },
+      { text: "Antara 25% - 50%", score2: 50 },
+      { text: "Antara 50% - 75%", score2: 75 },
+      { text: "Lebih dari 75%", score2: 100 },
     ],
   },
   {
     id: 3,
-    question: "Bagaimana cara menghindari utang yang tidak perlu?",
+    question: "Berapa persen dari gaji bulanan Anda yang biasanya dihabiskan untuk kegiatan investasi?",
     options: [
-      { text: "Mengambil pinjaman setiap saat untuk kebutuhan sehari-hari", score: 0 },
-      { text: "Hanya meminjam untuk keperluan yang benar-benar penting", score: 3 },
-      { text: "Utang adalah bagian dari kehidupan sehari-hari", score: 1 },
-      { text: "Tidak perlu memikirkan utang", score: 0 },
+      { text: "Kurang dari 25%", score3: 25 },
+      { text: "Antara 25% - 50%", score3: 50 },
+      { text: "Antara 50% - 75%", score3: 75 },
+      { text: "Lebih dari 75%", score3: 100 },
     ],
   },
   {
     id: 4,
-    question: "Mengapa perlu merencanakan investasi untuk masa depan?",
+    question: "Berapa persen dari gaji bulanan Anda yang biasanya dihabiskan untuk membayar hutang/cicilan?",
     options: [
-      { text: "Investasi tidak perlu, uang lebih baik disimpan di bawah kasur", score: 0 },
-      { text: "Menghasilkan keuntungan dan memastikan keuangan pensiun", score: 3 },
-      { text: "Investasi hanya cocok untuk orang kaya", score: 1 },
-      { text: "Tidak perlu berinvestasi, hidup untuk saat ini", score: 0 },
+      { text: "Kurang dari 25%", score4: 25 },
+      { text: "Antara 25% - 50%", score4: 50 },
+      { text: "Antara 50% - 75%", score4: 75 },
+      { text: "Lebih dari 75%", score4: 100 },
     ],
   },
   {
     id: 5,
-    question: "Bagaimana cara mengelola hutang kredit dengan bijak?",
+    question: "Berapa persen dari gaji bulanan Anda yang biasanya digunakan untuk hiburan?",
     options: [
-      { text: "Membayar hanya minimum setiap bulan", score: 0 },
-      { text: "Melunasi secepat mungkin dan menghindari bunga tinggi", score: 3 },
-      { text: "Hutang kredit tidak perlu diperhatikan", score: 1 },
-      { text: "Menggunakan kartu kredit untuk kebutuhan sehari-hari", score: 0 },
-    ],
-  },
-  {
-    id: 6,
-    question: "Apakah perlu membuat target keuangan jangka pendek dan panjang?",
-    options: [
-      { text: "Tidak perlu, keuangan bisa diatur kapan saja", score: 0 },
-      { text: "Membantu fokus dan mencapai tujuan keuangan", score: 3 },
-      { text: "Target keuangan hanya sesekali diperlukan", score: 1 },
-      { text: "Lebih baik hidup tanpa rencana keuangan", score: 0 },
-    ],
-  },
-  {
-    id: 7,
-    question: "Apa manfaat memiliki asuransi dalam perencanaan keuangan?",
-    options: [
-      { text: "Tidak perlu asuransi, uang lebih baik disimpan", score: 0 },
-      { text: "Melindungi dari risiko finansial dan kejadian tak terduga", score: 3 },
-      { text: "Asuransi hanya untuk orang yang takut risiko", score: 1 },
-      { text: "Tidak memerlukan perlindungan asuransi", score: 0 },
-    ],
-  },
-  {
-    id: 8,
-    question: "Bagaimana cara memilih jenis investasi yang sesuai dengan profil risiko?",
-    options: [
-      { text: "Investasi hanya berdasarkan saran teman-teman", score: 0 },
-      { text: "Melakukan riset dan memahami profil risiko sebelum berinvestasi", score: 3 },
-      { text: "Investasi tanpa memperhatikan risiko", score: 1 },
-      { text: "Semua investasi memiliki risiko yang sama", score: 0 },
-    ],
-  },
-  {
-    id: 9,
-    question: "Mengapa perlu menghindari godaan impulsive buying?",
-    options: [
-      { text: "Impulsive buying membuat hidup lebih seru", score: 0 },
-      { text: "Menghemat uang dan mencegah pemborosan", score: 3 },
-      { text: "Beli apa saja tanpa pertimbangan, tidak masalah", score: 1 },
-      { text: "Tidak perlu memikirkan keuangan saat berbelanja", score: 0 },
-    ],
-  },
-  {
-    id: 10,
-    question: "Bagaimana cara menciptakan kebiasaan menabung secara teratur?",
-    options: [
-      { text: "Menabung hanya jika ada sisa uang", score: 0 },
-      { text: "Menetapkan jumlah tetap untuk ditabung setiap bulan", score: 3 },
-      { text: "Tidak perlu menabung, uang bisa digunakan kapan saja", score: 1 },
-      { text: "Menabung hanya saat ada promo atau diskon", score: 0 },
+      { text: "Kurang dari 25%", score5: 25 },
+      { text: "Antara 25% - 50%", score5: 50 },
+      { text: "Antara 50% - 75%", score5: 75 },
+      { text: "Lebih dari 75%", score5: 100 },
     ],
   },
 ];
 
 let currQuestion = 0;
-let score = 0;
+let score1 = 0;
+let score2 = 0;
+let score3 = 0;
+let score4 = 0;
+let score5 = 0;
 let percentage = 0;
+let totalScore = 0;
 
 function loadQuestion() {
   const quizContainer = document.getElementById("quiz-container");
@@ -137,13 +87,26 @@ function loadQuestion() {
 
 function handleOptionClick(selectedIndex) {
   const selectedOption = questions[currQuestion].options[selectedIndex];
-  if (selectedOption.score) {
-    score += selectedOption.score;
+  if (selectedOption.score1) {
+    score1 += selectedOption.score1;
+    totalScore += selectedOption.score1;
+  } else if (selectedOption.score2) {
+    score2 += selectedOption.score2;
+    totalScore += selectedOption.score2;
+  } else if (selectedOption.score3) {
+    score3 += selectedOption.score3;
+    totalScore += selectedOption.score3;
+  } else if (selectedOption.score4) {
+    score4 += selectedOption.score4;
+    totalScore += selectedOption.score4;
+  } else if (selectedOption.score5) {
+    score5 += selectedOption.score5;
+    totalScore += selectedOption.score5;
   }
 
   if (currQuestion < questions.length - 1) {
     currQuestion++;
-    percentage += 10;
+    percentage += 20;
     loadQuestion();
     updateProgressBar();
   } else {
@@ -157,33 +120,85 @@ function showResult() {
 
   const quizContainer = document.getElementById("quiz-container");
 
-  let resultText, resultClass;
+  let resultText;
+  let recommendationText;
 
-  if (score >= 0 && score <= 10) {
-    resultText = "Anda perlu meningkatkan pengetahuan keuangan Anda.";
-    resultClass = "text-red-500";
-  } else if (score > 10 && score <= 20) {
-    resultText = "Anda memiliki pemahaman dasar tentang manajemen keuangan.";
-    resultClass = "text-yellow-500";
-  } else if (score > 20 && score <= 30) {
-    resultText = "Anda telah memahami prinsip-prinsip manajemen keuangan dengan baik.";
-    resultClass = "text-green-500";
+  // Assuming you have a variable 'score' defined somewhere
+  if (score2 > score1 && score2 > score3 && score2 > score4 && score2 > score5) {
+    resultText = "Anda perlu mengurangi pengeluaran judi Anda.";
+    recommendationText = "Dapat dilihat bahwa pengeluaran judi anda terbesar daripada pengeluaran yang lain. Kurangi pengeluaran tersebut dan tingkatkan investasi anda untuk hasil yang lebih maksimal";
+  } else if (score2 < score1 && score2 < score3 && score2 < score4 && score2 < score5) {
+    resultText = "Hasilmu bagus, pengeluaran judi Anda kecil. Tingkatkan investasi Anda.";
+    recommendationText = "Dapat dilihat bahwa pengeluaran judi anda terkecil daripada pengeluaran yang lain. Anda dapat meningkatkan investasi anda untuk hasil yang lebih maksimal";
+  } else if (score3 > score1 && score3 > score2 && score3 > score4 && score3 > score5) {
+    resultText = "Hasilmu bagus, pertahankan dan tingkatkan investasi Anda.";
+    recommendationText = "Dapat dilihat bahwa pengeluaran investasi anda terbesar daripada pengeluaran yang lain. Pertahankan hal tersebut untuk hasil yang maksimal";
+  } else if (score1 > score2 && score1 > score3 && score1 > score4 && score1 > score5) {
+    resultText = "Biaya hidup anda tinggi, berhati-hatilah terhadap pengeluaran yang lain";
+    recommendationText = "Dapat dilihat bahwa pengeluaran biaya hidup anda terbesar daripada pengeluaran yang lain. Kurangi pengeluaran tersebut dan tingkatkan investasi anda untuk hasil yang lebih maksimal";
+  } else if (score4 > score1 && score4 > score2 && score4 > score3 && score4 > score5) {
+    resultText = "Anda perlu berhati-hati dalam pengeluaran cicilan/hutang anda";
+    recommendationText = "Dapat dilihat bahwa pengeluaran cicilan/hutang anda terbesar daripada pengeluaran yang lain. Kurangi pengeluaran tersebut dan tingkatkan investasi anda untuk hasil yang lebih maksimal";
+  } else if (score5 > score1 && score5 > score2 && score5 > score3 && score5 > score4) {
+    resultText = "Pengeluaran hiburan anda tinggi, berhati-hatilah terhadap pengeluaran yang lain";
+    recommendationText = "Dapat dilihat bahwa pengeluaran hiburan anda terbesar daripada pengeluaran yang lain. Kurangi pengeluaran tersebut dan tingkatkan investasi anda untuk hasil yang lebih maksimal";
+  } else if (score1 === score2 && score1 === score3 && score1 === score4 && score1 === score5) {
+    resultText = "Pengeluaran Anda seimbang di setiap kategori.";
+    recommendationText = "Dapat dilihat bahwa pengeluaran anda seimbang disetiap kategori. Anda dapat mengurangi pengeluaran judi anda dan meningkatkan investasi anda untuk hasil yang lebih maksimal";
   } else {
-    resultText = "Skor Anda di luar rentang klasifikasi.";
-    resultClass = "text-gray-500";
+    resultText = "Hasil anda cukup menarik";
+    recommendationText = "Dapat dilihat bahwa pengeluaran anda cukup bervariasi. Anda dapat meningkatkan investasi anda untuk hasil yang lebih maksimal";
   }
 
+  // Set the innerHTML based on the result
   quizContainer.innerHTML = `
     <div class="text-xl font-bold text-center flex flex-col lg:flex-row gap-10">
-      <div class="w-full lg:w-1/2 flex flex-col gap-5 items-center">
-        <h1 class="${resultClass}">${resultText}</h1>
-        <a href="penilaianDiri.html" class="bg-[#2EC4B6] text-white rounded-md font-semibold py-2 px-5 w-fit">Kembali</a>
+      <div class="w-full lg:w-1/2 flex flex-col gap-5 items-center justify-center">
+        <h1 class="text-4xl font-bold">Tahukah Kamu?</h1>
+        <h1 class="text-xl font-semibold">${resultText}</h1>
       </div>
-      <div class="w-full lg:w-1/2 rounded-lg overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW9uZXklMjBtYW5hZ2VtZW50fGVufDB8fDB8fHww" alt="" class="w-full h-full"/>
+      <div class="w-full lg:w-1/2">
+        <div class="rounded-lg overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW9uZXklMjBtYW5hZ2VtZW50fGVufDB8fDB8fHww" alt="" class="w-full"/>
+        </div>
+      </div>
+    </div>
+    <div class="w-full flex flex-col lg:flex-row gap-5 mt-32">
+      <div class="w-full lg:w-1/2">
+        <canvas id="myChart"></canvas>
+      </div>
+      <div class="w-full lg:w-1/2 flex flex-col gap-5 items-center justify-center">
+        <h1 class="text-lg">${recommendationText}</h1>
+        <a href="penilaianDiri.html" class="bg-[#2EC4B6] text-white rounded-md font-semibold py-2 px-5 w-fit">Kembali</a>
       </div>
     </div>
   `;
+
+  // Create doughnut chart
+  const ctx = document.getElementById("myChart");
+  new Chart(ctx, {
+    type: "doughnut",
+    data: {
+      labels: ["Biaya Hidup", "Perjudian Online", "Investasi", "Hutang/Cicilan", "Hiburan"],
+      datasets: [
+        {
+          label: "Skor",
+          data: [score1, score2, score3, score4, score5],
+          backgroundColor: ["rgb(34, 197, 74)", "rgb(54, 162, 235)", "rgb(255, 205, 86)", "rgb(255, 99, 132)", "rgb(153, 102, 255)"],
+          hoverOffset: 4,
+        },
+      ],
+    },
+    options: {
+      plugins: {
+        legend: {
+          labels: {
+            color: "white", // Mengatur warna label menjadi putih
+          },
+        },
+      },
+    },
+  });
 }
 
 function updateProgressBar() {

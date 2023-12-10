@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
               .join("")}
         </div>
         <div class="w-full flex justify-center md:justify-end mb-5 md:mb-0">
-            <a href="https://whatsapp.com" target="_blank" class="py-2 px-5 bg-[#2EC4B6] rounded-full text-white font-semibold">Buat Jadwal Konseling</a>
+            <button id="buatJadwal" class="py-2 px-5 bg-[#2EC4B6] rounded-full text-white font-semibold">Buat Jadwal Konseling</button>
         </div>
     </div>
   `;
@@ -193,5 +193,33 @@ document.addEventListener("DOMContentLoaded", function (e) {
     });
 
     layananUlasanContainer.innerHTML = ulasanHTML;
+  });
+
+  const modal = document.getElementById("small-modal");
+  const login = document.getElementById("login");
+
+  const isLoggedIn = localStorage.getItem("login");
+  console.log(isLoggedIn);
+
+  const buatJadwalList = document.querySelectorAll("#buatJadwal");
+
+  buatJadwalList.forEach((element) => {
+    element.addEventListener("click", () => {
+      if (isLoggedIn) {
+        // Pengguna sudah login, buka tautan di tab baru
+        console.log("sudah login");
+        window.open("https://whatsapp.com", "_blank");
+      } else {
+        // Pengguna belum login, tampilkan modal login
+        console.log("belum login");
+
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      }
+
+      login.addEventListener("click", () => {
+        window.location.assign("/pages/login.html");
+      });
+    });
   });
 });

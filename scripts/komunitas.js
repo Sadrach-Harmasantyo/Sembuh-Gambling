@@ -1,4 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("small-modal");
+  const userData = JSON.parse(localStorage.getItem("login"));
+
+  if (userData) {
+    console.log("Nama:", userData.nama);
+    console.log("Email:", userData.email);
+  } else {
+    console.log("Data pengguna tidak ditemukan di local storage.");
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+
+    login.addEventListener("click", () => {
+      window.location.assign("/pages/login.html");
+    });
+  }
+
   localStorage.removeItem("imageData");
 
   // Get the necessary elements
@@ -27,25 +43,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  // Mengambil data dari local storage
-  const userData = JSON.parse(localStorage.getItem("login"));
-
-  if (userData) {
-    console.log("Nama:", userData.nama);
-    console.log("Email:", userData.email);
-  } else {
-    console.log("Data pengguna tidak ditemukan di local storage.");
-  }
-
   const inputPosting = document.getElementById("input-posting");
   const btnPosting = document.getElementById("btn-posting");
   let containerPosting = document.getElementById("container-posting");
 
   btnPosting.addEventListener("click", () => {
-    if (!userData) {
-      alert("harap login atau register terlebih dahulu");
-    }
-
     if (inputPosting.value != "") {
       displayPosting(inputPosting.value);
       inputPosting.value = "";

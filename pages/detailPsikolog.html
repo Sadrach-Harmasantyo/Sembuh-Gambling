@@ -244,6 +244,41 @@
       <img src="../assets/icon/whatsapp.png" alt="" srcset="" class="w-10 h-10" />
     </a>
 
+    <section id="modal">
+      <!-- Modal toggle -->
+      <button
+        data-modal-target="small-modal"
+        data-modal-toggle="small-modal"
+        class="hidden w-full md:w-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+        type="button"
+      >
+        Small modal
+      </button>
+
+      <!-- Small Modal -->
+      <div id="small-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative w-full max-w-md max-h-full">
+          <!-- Modal content -->
+          <div class="relative bg-white rounded-lg shadow border-2 border-[#2EC4B6]">
+            <!-- Modal header -->
+            <div class="flex items-center justify-start p-4 md:p-5 border-b border-[#2EC4B6] rounded-t gap-5">
+              <img src="../assets/logo.png" alt="" class="w-10 h-10" />
+              <h3 class="text-xl font-bold">Sembuh <span class="text-[#2EC4B6]">Gambling</span></h3>
+            </div>
+            <!-- Modal body -->
+            <div class="p-4 md:p-5 space-y-4">
+              <p class="text-base leading-relaxed">Anda belum login !</p>
+              <p class="text-base leading-relaxed">Silahkan login terlebih dahulu untuk mengeksplor lebih jauh fitur Sembuh Gambling</p>
+            </div>
+            <!-- Modal footer -->
+            <div class="flex items-center p-4 md:p-5 border-t border-[#2EC4B6] rounded-b">
+              <button id="login" data-modal-hide="small-modal" type="button" class="text-white bg-[#2EC4B6] hover:opacity-80 font-semibold rounded-lg px-5 py-2.5 text-center">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <script src="../scripts/checkLogin.js"></script>
     <script src="../scripts/detailPsikolog.js" type="module"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
