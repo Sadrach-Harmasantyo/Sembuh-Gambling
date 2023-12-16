@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="w-5/6 flex flex-col gap-3">
         <h1 class="text-xl font-bold">${userData.nama}</h1>
         <p>User</p>
-        <button class="btn-hapus w-fit bg-[#2EC4B6] py-2 px-5 rounded-md text-white font-semibold">Hapus</button>
+        <button class="btn-hapus w-fit bg-[#2EC4B6] py-2 px-5 rounded-md text-white font-semibold border border-[#2EC4B6] hover:bg-white hover:text-[#2EC4B6] transition-all duration-300">Hapus</button>
       </div>
     </div>
     <div>
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <input type="text" name="input-balasan" id="input-balasan" placeholder="Tulis Balasanmu" class="border-none focus:ring-0 rounded-md bg-gray-100 w-full" />
               </div>
               <div class="w-fit">
-                <button id="btn-balas" class="py-2 bg-[#2EC4B6] px-5 rounded-full text-white font-semibold">Balas</button>
+                <button id="btn-balas" class="py-2 bg-[#2EC4B6] px-5 rounded-full text-white font-semibold border border-[#2EC4B6] hover:bg-white hover:text-[#2EC4B6] transition-all duration-300">Balas</button>
               </div>
             </div>
           </div>

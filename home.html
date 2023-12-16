@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="assets/logo.png" />
     <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="(min-width: 1200px)" />
   </head>
   <body>
     <nav class="bg-white fixed w-full z-50 top-0 left-0 border-b shadow-sm">
@@ -17,8 +18,18 @@
           <span class="self-center text-2xl font-bold whitespace-nowrap hidden sm:block">Sembuh <span class="text-[#2EC4B6]">Gambling</span></span>
         </a>
         <div class="flex lg:order-2">
-          <a class="text-white bg-[#2EC4B6] hover:opacity-90 font-medium rounded-full text-sm px-5 py-3 text-center mr-3 md:mr-0 cursor-pointer" id="login-button" href="pages/login.html">LOGIN</a>
-          <a class="text-white bg-[#2EC4B6] hover:opacity-90 font-medium rounded-full text-sm px-5 py-3 text-center mr-3 md:mr-0 cursor-pointer hidden" id="profile-button" href="pages/profile.html">PROFIL</a>
+          <a
+            class="text-white bg-[#2EC4B6] hover:opacity-90 rounded-full text-sm px-5 py-3 text-center mr-3 md:mr-0 cursor-pointer border border-[#2EC4B6] hover:bg-white hover:text-[#2EC4B6] transition-all duration-300 font-semibold"
+            id="login-button"
+            href="pages/login.html"
+            >LOGIN</a
+          >
+          <a
+            class="text-white bg-[#2EC4B6] font-semibold rounded-full text-sm px-5 py-3 text-center mr-3 md:mr-0 cursor-pointer hidden border border-[#2EC4B6] hover:bg-white hover:text-[#2EC4B6] transition-all duration-300"
+            id="profile-button"
+            href="pages/profile.html"
+            >PROFIL</a
+          >
           <button
             data-collapse-toggle="navbar-sticky"
             type="button"
@@ -88,13 +99,17 @@
     </nav>
 
     <section id="heroes" class="flex justify-center pt-24 min-h-screen">
-      <div id="" class="w-full p-6 max-w-[1080px] flex gap-7 justify-center flex-col lg:flex-row items-center">
+      <div data-aos="fade-right" data-aos-duration="1000" id="" class="w-full p-6 max-w-[1080px] flex gap-7 justify-center flex-col lg:flex-row items-center">
         <div class="order-2 lg:order-1 lg:w-3/5 flex justify-center flex-col gap-4">
           <p class="font-bold text-3xl md:text-4xl">Bebaskan Kecanduan Judi Anda dengan Satu Klik Bersama Kami</p>
           <p class="text-base">Buka pintu ke kehidupan baru tanpa judi, temukan dukungan, dan raih kesehatan mentalmu bersama Sembuh Gambling</p>
-          <a href="pages/konseling.html" class="py-2 bg-[#2EC4B6] rounded-full text-white w-fit px-4 flex items-center justify-center font-semibold">Mulai Sekarang</a>
+          <a
+            href="pages/konseling.html"
+            class="py-2 bg-[#2EC4B6] rounded-full text-white w-fit px-4 flex items-center justify-center font-semibold border hover:text-[#2EC4B6] hover:bg-white hover:border-[#2EC4B6] transition-all duration-300"
+            >Mulai Sekarang</a
+          >
         </div>
-        <div class="order-1 lg:order-2 w-full lg:w-2/5 flex gap-3 flex-col items-center lg:items-end">
+        <div data-aos="fade-left" data-aos-duration="1000" class="order-1 lg:order-2 w-full lg:w-2/5 flex gap-3 flex-col items-center lg:items-end">
           <img src="assets/img-heroes.png" alt="img-heroes" class="" />
         </div>
       </div>
@@ -102,30 +117,30 @@
 
     <section id="layanan" class="flex justify-center mt-28">
       <div class="w-full max-w-[1080px] p-6">
-        <h1 class="text-3xl font-bold text-center">Layanan Sembuh Gambling</h1>
+        <h1 data-aos="fade-down" data-aos-duration="1200" class="text-3xl font-bold text-center">Layanan Sembuh Gambling</h1>
         <div class="flex flex-col lg:flex-row gap-5 mt-10">
-          <div class="w-full lg:w-1/3 border-2 rounded-md flex justify-center items-center flex-col px-8 py-6 gap-3">
+          <div data-aos="fade-right" data-aos-duration="800" class="w-full lg:w-1/3 border-2 rounded-md flex justify-center items-center flex-col px-8 py-6 gap-3">
             <img src="assets/img-layanan.png" alt="" class="w-2/3 md:w-1/4 lg:w-2/3" />
             <div class="text-center flex flex-col items-center gap-5">
               <h1 class="text-2xl font-bold">Konseling Individu</h1>
               <p class="text-sm">Konseling individu dengan memberikan dukungan emosional dan panduan profesional untuk menangani masalah personal seseorang.</p>
-              <a href="pages/konseling.html" class="w-fit py-2 px-4 rounded-full bg-[#2EC4B6] font-semibold text-white">Selengkapnya</a>
+              <a href="pages/konseling.html" class="w-fit py-2 px-4 rounded-full bg-[#2EC4B6] font-semibold text-white border hover:text-[#2EC4B6] hover:bg-white hover:border-[#2EC4B6] transition-all duration-300">Selengkapnya</a>
             </div>
           </div>
-          <div class="w-full lg:w-1/3 border-2 rounded-md flex justify-center items-center flex-col px-8 py-6 gap-3">
+          <div data-aos="fade-up" data-aos-duration="800" class="w-full lg:w-1/3 border-2 rounded-md flex justify-center items-center flex-col px-8 py-6 gap-3">
             <img src="assets/img-layanan3.png" alt="" class="w-2/3 md:w-1/4 lg:w-2/3" />
             <div class="text-center flex flex-col items-center gap-5">
               <h1 class="text-2xl font-bold">Konseling Keluarga</h1>
               <p class="text-sm">Konseling keluarga dengan memberikan bantuan dukungan bagi keluarga untuk mengatasi konflik dan memperkuat hubungan antaranggota keluarga.</p>
-              <a href="pages/konseling.html" class="w-fit py-2 px-4 rounded-full bg-[#2EC4B6] font-semibold text-white">Selengkapnya</a>
+              <a href="pages/konseling.html" class="w-fit py-2 px-4 rounded-full bg-[#2EC4B6] font-semibold text-white border hover:text-[#2EC4B6] hover:bg-white hover:border-[#2EC4B6] transition-all duration-300">Selengkapnya</a>
             </div>
           </div>
-          <div class="w-full lg:w-1/3 border-2 rounded-md flex justify-center items-center flex-col px-8 py-6 gap-3">
+          <div data-aos="fade-left" data-aos-duration="800" class="w-full lg:w-1/3 border-2 rounded-md flex justify-center items-center flex-col px-8 py-6 gap-3">
             <img src="assets/img-layanan2.png" alt="" class="w-2/3 md:w-1/4 lg:w-2/3" />
             <div class="text-center flex flex-col items-center gap-5">
               <h1 class="text-2xl font-bold">Konseling Profesional</h1>
               <p class="text-sm">Konseling profesional dengan memberikan bantuan layanan dukungan emosional dan pembimbingan untuk mengatasi tantangan karier dan profesional.</p>
-              <a href="pages/konseling.html" class="w-fit py-2 px-4 rounded-full bg-[#2EC4B6] font-semibold text-white">Selengkapnya</a>
+              <a href="pages/konseling.html" class="w-fit py-2 px-4 rounded-full bg-[#2EC4B6] font-semibold text-white border hover:text-[#2EC4B6] hover:bg-white hover:border-[#2EC4B6] transition-all duration-300">Selengkapnya</a>
             </div>
           </div>
         </div>
@@ -137,30 +152,30 @@
         <img src="assets/pattern-alasan.png" alt="" class="w-full h-full" />
       </div>
       <div class="w-full max-w-[1080px] p-6">
-        <h1 class="text-3xl font-bold text-center text-white pt-20">Kenapa Harus Konseling Dengan Kami</h1>
+        <h1 data-aos="fade-down" data-aos-duration="1200" class="text-3xl font-bold text-center text-white pt-20">Kenapa Harus Konseling Dengan Kami</h1>
         <div class="flex flex-col lg:flex-row gap-5 mt-10">
-          <div class="w-full lg:w-1/4 border-2 rounded-md flex items-center flex-col px-8 py-6 bg-white">
+          <div data-aos="fade-up" data-aos-duration="800" class="w-full lg:w-1/4 border-2 rounded-md flex items-center flex-col px-8 py-6 bg-white">
             <img src="assets/humanis.png" alt="" class="w-2/4 md:w-1/6 lg:w-1/3 rounded-md" />
             <div class="text-center flex flex-col items-center gap-5">
               <h1 class="text-xl font-bold">Humanis</h1>
               <p class="text-sm text-gray-500">Fitur Gamification yang dapat menunjukkan perkembangan karakter pribadi sehingga dapat termotivasi terus-menerus.</p>
             </div>
           </div>
-          <div class="w-full lg:w-1/4 border-2 rounded-md flex items-center flex-col px-8 py-6 bg-white">
+          <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" class="w-full lg:w-1/4 border-2 rounded-md flex items-center flex-col px-8 py-6 bg-white">
             <img src="assets/Responsif.png" alt="" class="w-2/4 md:w-1/6 lg:w-1/3 rounded-md" />
             <div class="text-center flex flex-col items-center gap-5">
               <h1 class="text-xl font-bold">Responsif</h1>
               <p class="text-sm text-gray-500">Live chat realtime online bagi pengguna agar dapat memberikan keputusan lebih lanjut mengenai gejala yang dialami.</p>
             </div>
           </div>
-          <div class="w-full lg:w-1/4 border-2 rounded-md flex items-center flex-col px-8 py-6 bg-white">
+          <div data-aos="fade-up" data-aos-duration="1200" data-aos-delay="150" class="w-full lg:w-1/4 border-2 rounded-md flex items-center flex-col px-8 py-6 bg-white">
             <img src="assets/Terpercaya.png" alt="" class="w-2/4 md:w-1/6 lg:w-1/3 rounded-md" />
             <div class="text-center flex flex-col items-center gap-5">
               <h1 class="text-xl font-bold">Terpercaya</h1>
               <p class="text-sm text-gray-500">Konsultasi dengan berbagai konselor yang siap mendengarkan untuk memastikan diagnosa dan ketepatan solusi.</p>
             </div>
           </div>
-          <div class="w-full lg:w-1/4 border-2 rounded-md flex items-center flex-col px-8 py-6 bg-white">
+          <div data-aos="fade-up" data-aos-duration="1400" data-aos-delay="200" class="w-full lg:w-1/4 border-2 rounded-md flex items-center flex-col px-8 py-6 bg-white">
             <img src="assets/Terarah.png" alt="" class="w-2/4 md:w-1/6 lg:w-1/3 rounded-md" />
             <div class="text-center flex flex-col items-center gap-5">
               <h1 class="text-xl font-bold">Terarah</h1>
@@ -173,23 +188,24 @@
 
     <section id="rekomendasi" class="flex justify-center mt-28">
       <div class="w-full max-w-[1080px] p-6">
-        <h1 class="text-3xl font-bold text-center">Rekomendasi Psikolog Buat Kamu</h1>
-        <div id="psikolog-list-home" class="flex flex-col lg:flex-row gap-3 mt-10"></div>
+        <h1 data-aos="fade-down" data-aos-duration="1200" class="text-3xl font-bold text-center">Rekomendasi Psikolog Buat Kamu</h1>
+        <div data-aos="fade-down" data-aos-duration="1200" id="psikolog-list-home" class="flex flex-col lg:flex-row gap-3 mt-10"></div>
         <div class="flex justify-center w-full mt-8">
           <a href="pages/konseling.html#cari-psikolog" class="py-2 px-4 rounded-full bg-white border border-[#2EC4B6] text-[#2EC4B6] font-semibold text-xl hover:bg-[#2EC4B6] hover:text-white transition-all duration-300">Lihat Semua</a>
         </div>
       </div>
     </section>
 
+    <!-- Bisa di-refresh dulu jika tampilan responsive pada ulasan tidak sesuai -->
     <section id="ulasan" class="flex justify-center mt-28">
       <img src="assets/pattern.png" alt="" class="absolute -z-10 w-full h-[650px]" />
 
       <div class="w-full max-w-[1080px] p-6">
         <div class="w-full lg:w-3/4 mx-auto">
-          <h1 class="text-3xl font-bold text-center leading-relaxed text-white">Kata Mereka Yang Telah Berproses Bersama Sembuh Gambling</h1>
+          <h1 data-aos="fade-left" data-aos-duration="1200" data-aos-delay="500" class="text-3xl font-bold text-center leading-relaxed text-white">Kata Mereka Yang Telah Berproses Bersama Sembuh Gambling</h1>
         </div>
         <div class="mx-auto mt-6">
-          <p class="text-xl text-center text-gray-100 font-semibold leading-10 hidden md:block">
+          <p data-aos="fade-right" data-aos-duration="1200" data-aos-delay="500" class="text-xl text-center text-gray-100 font-semibold leading-10 hidden md:block">
             Kami berharap kamu juga bisa merasakan apa yang mereka rasakan.
             <br />
             <strong class="text-gray-100">Sekarang Giliranmu Untuk Berproses.</strong>
@@ -209,8 +225,8 @@
             </div>
             <div id="sliderContainer" class="w-10/12 overflow-hidden">
               <ul id="slider" class="flex md:w-full duration-700">
-                <li class="p-5">
-                  <div class="p-5 border-2 rounded-md h-full bg-white">
+                <li data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="100" class="p-5">
+                  <div class="p-5 border-2 rounded-md h-full bg-white flex flex-col items-center md:items-start">
                     <div class="w-24 h-24 rounded-full bg-slate-200 flex justify-center items-center overflow-hidden">
                       <img src="assets/fotoProfil/anthony-reese.jpg.png" alt="" />
                     </div>
@@ -226,8 +242,8 @@
                     </div>
                   </div>
                 </li>
-                <li class="p-5">
-                  <div class="p-5 border-2 rounded-md h-full bg-white">
+                <li data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="300" class="p-5">
+                  <div class="p-5 border-2 rounded-md h-full bg-white flex flex-col items-center md:items-start">
                     <div class="w-24 h-24 rounded-full bg-slate-200 flex justify-center items-center overflow-hidden">
                       <img src="assets/fotoProfil/T02A7MDHR60-U02JH4ZKJHH-6a408dbb9729-512-1.jpg.png" alt="" />
                     </div>
@@ -244,7 +260,7 @@
                   </div>
                 </li>
                 <li class="p-5">
-                  <div class="p-5 border-2 rounded-md h-full bg-white">
+                  <div class="p-5 border-2 rounded-md h-full bg-white flex flex-col items-center md:items-start">
                     <div class="w-24 h-24 rounded-full bg-slate-200 flex justify-center items-center overflow-hidden">
                       <img src="assets/fotoProfil/random.jpg" alt="" />
                     </div>
@@ -262,7 +278,7 @@
                   </div>
                 </li>
                 <li class="p-5">
-                  <div class="p-5 border-2 rounded-md h-full bg-white">
+                  <div class="p-5 border-2 rounded-md h-full bg-white flex flex-col items-center md:items-start">
                     <div class="w-24 h-24 rounded-full bg-slate-200 flex justify-center items-center overflow-hidden">
                       <img src="assets/fotoProfil/speed.jpg" alt="" class="w-full h-full" />
                     </div>
@@ -279,7 +295,7 @@
                   </div>
                 </li>
                 <li class="p-5">
-                  <div class="p-5 border-2 rounded-md h-full bg-white">
+                  <div class="p-5 border-2 rounded-md h-full bg-white flex flex-col items-center md:items-start">
                     <div class="w-24 h-24 rounded-full bg-slate-200 flex justify-center items-center overflow-hidden">
                       <img src="assets/fotoProfil/random2.jpg" alt="" class="w-full h-full" />
                     </div>
@@ -378,10 +394,14 @@
       </div>
     </footer>
 
-    <a href="https://whatsapp.com" class="fixed right-4 bottom-4 w-20 h-20 bg-white rounded-full border-2 border-[#2EC4B6] flex justify-center items-center">
+    <a href="https://whatsapp.com" class="fixed right-4 bottom-4 w-20 h-20 bg-white rounded-full border-2 border-[#2EC4B6] flex justify-center items-center hover:scale-105 transition-all duration-300">
       <img src="assets/icon/whatsapp.png" alt="" srcset="" class="w-10 h-10" />
     </a>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script>
       let sliderContainer = document.getElementById("sliderContainer");
       let slider = document.getElementById("slider");

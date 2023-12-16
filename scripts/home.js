@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p>${psikolog.pengalaman}</p>
               </div>
           </div>
-          <a href="pages/detailPsikolog.html?id=${psikolog.id}" class="w-full text-center py-2 px-4 rounded-full bg-[#2EC4B6] font-semibold text-white">Selengkapnya</a>
+          <a href="pages/detailPsikolog.html?id=${psikolog.id}" class="w-full text-center py-2 px-4 rounded-full bg-[#2EC4B6] font-semibold text-white hover:bg-white hover:text-[#2EC4B6] transition-all duration-300 border hover:border hover:border-[#2EC4B6]">Selengkapnya</a>
         </div>
       `;
 

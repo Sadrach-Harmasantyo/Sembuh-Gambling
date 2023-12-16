@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
               .join("")}
         </div>
         <div class="w-full flex justify-center md:justify-end mb-5 md:mb-0">
-            <button id="buatJadwal" class="py-2 px-5 bg-[#2EC4B6] rounded-full text-white font-semibold">Buat Jadwal Konseling</button>
+            <button id="buatJadwal" class="py-2 px-5 bg-[#2EC4B6] rounded-full text-white font-semibold border border-[#2EC4B6] hover:bg-white hover:text-[#2EC4B6] transition-all duration-300">Buat Jadwal Konseling</button>
         </div>
     </div>
   `;

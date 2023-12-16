@@ -36,7 +36,7 @@ function populateArtikelList(artikelData) {
     const artikel = artikelData[i];
 
     const artikelCard = document.createElement("div");
-    artikelCard.classList.add("w-full", "lg:max-w-xs", "bg-white", "border", "rounded-lg", "shadow", "overflow-hidden");
+    artikelCard.classList.add("w-full", "lg:max-w-xs", "bg-white", "border", "rounded-lg", "shadow", "overflow-hidden", "transition-all", "duration-300", "hover:bg-slate-100");
 
     artikelCard.innerHTML = `
             <a href="artikelDetail.html?id=${artikel.id}">

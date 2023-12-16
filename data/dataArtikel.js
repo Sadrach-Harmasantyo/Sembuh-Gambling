@@ -28,7 +28,7 @@ const artikel = [
   },
   {
     id: 4,
-    judul: "Rahasia Gelap Judi Online",
+    judul: "Rahasia Gelap Industri Judi Online",
     terbit: "7 Oktober 2022",
     penulis: "Dini Aulia",
     inisial: "DA",

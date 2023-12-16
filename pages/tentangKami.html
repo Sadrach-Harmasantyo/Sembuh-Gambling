@@ -8,8 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="../assets/logo.png" />
     <link rel="stylesheet" href="../style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="(min-width: 1200px)" />
   </head>
-  <body>
+  <body class="overflow-x-hidden">
     <nav class="bg-white fixed w-full z-50 top-0 left-0 border-b shadow-sm">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="../home.html" class="flex items-center">
@@ -17,8 +18,18 @@
           <span class="self-center text-2xl font-bold whitespace-nowrap hidden sm:block">Sembuh <span class="text-[#2EC4B6]">Gambling</span></span>
         </a>
         <div class="flex lg:order-2">
-          <a class="text-white bg-[#2EC4B6] hover:opacity-90 font-medium rounded-full text-sm px-5 py-3 text-center mr-3 md:mr-0 cursor-pointer" id="login-button" href="login.html">LOGIN</a>
-          <a class="text-white bg-[#2EC4B6] hover:opacity-90 font-medium rounded-full text-sm px-5 py-3 text-center mr-3 md:mr-0 cursor-pointer hidden" id="profile-button" href="profile.html">PROFIL</a>
+          <a
+            class="text-white bg-[#2EC4B6] font-semibold rounded-full text-sm px-5 py-3 text-center mr-3 md:mr-0 cursor-pointer border border-[#2EC4B6] hover:bg-white hover:text-[#2EC4B6] transition-all duration-300"
+            id="login-button"
+            href="login.html"
+            >LOGIN</a
+          >
+          <a
+            class="text-white bg-[#2EC4B6] font-semibold rounded-full text-sm px-5 py-3 text-center mr-3 md:mr-0 cursor-pointer hidden border border-[#2EC4B6] hover:bg-white hover:text-[#2EC4B6] transition-all duration-300"
+            id="profile-button"
+            href="profile.html"
+            >PROFIL</a
+          >
           <button
             data-collapse-toggle="navbar-sticky"
             type="button"
@@ -83,21 +94,21 @@
     </nav>
 
     <section class="mt-28 text-center flex flex-col items-center">
-      <div class="p-6">
+      <div data-aos="fade-down" data-aos-duration="1200" class="p-6">
         <h1 class="text-3xl font-bold">Sembuh Gambling</h1>
         <h1 class="text-3xl font-bold text-[#2EC4B6] mt-5">Platform Penyembuhan Kecanduan Judi Online di Indonesia</h1>
       </div>
-      <div class="w-full bg-[#011627] h-[450px] mt-14 max-w-screen-xl">
+      <div data-aos="fade-up" data-aos-duration="1500" class="w-full bg-[#011627] h-[450px] mt-14 max-w-screen-xl">
         <div class="text-center w-full flex items-center flex-col gap-20 justify-center h-full">
           <img src="../assets/logo.png" alt="banner" class="w-52 h-52" />
           <h1 class="text-center text-white text-4xl md:text-5xl font-bold w-1/2">Sembuh <span class="text-[#2EC4B6]">Gambling</span></h1>
         </div>
       </div>
       <div class="mt-14 flex flex-col lg:flex-row gap-5 lg:gap-0 max-w-[1080px] p-6">
-        <div class="w-full lg:w-2/3 flex justify-start">
+        <div data-aos="fade-right" data-aos-duration="1200" class="w-full lg:w-2/3 flex justify-start">
           <h1 class="text-3xl font-bold text-left">Latar Belakang</h1>
         </div>
-        <div class="w-full text-justify">
+        <div data-aos="fade-left" data-aos-duration="1200" class="w-full text-justify">
           <p>
             Sembuh Gambling adalah platform konseling daring yang berkomitmen membantu individu keluar dari kecanduan judi online. Dengan tim terlatih, layanan terjangkau, dan lingkungan aman, platform ini menyediakan sesi konseling pribadi
             dan dukungan komunitas untuk pemulihan holistik.
@@ -109,13 +120,13 @@
     </section>
 
     <section class="mt-28 flex flex-col items-center p-6">
-      <h1 class="font-bold text-3xl text-[#2EC4B6] text-center w-full">Sembuh Gambling Membantu Orang Untuk Lepas Dari Belenggu Perjudian</h1>
+      <h1 data-aos="fade-down" data-aos-duration="1200" class="font-bold text-3xl text-[#2EC4B6] text-center w-full">Sembuh Gambling Membantu Orang Untuk Lepas Dari Belenggu Perjudian</h1>
 
       <div class="flex flex-col lg:flex-row mt-14 gap-10 max-w-[1080px]">
-        <div class="w-full lg:w-1/2 h-96 bg-slate-200">
+        <div data-aos="fade-right" data-aos-duration="1200" class="w-full lg:w-1/2 h-96 bg-slate-200">
           <img src="https://images.unsplash.com/photo-1543357480-c60d40007a3f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZnJlZWRvbXxlbnwwfHwwfHx8MA%3D%3D" alt="" class="w-full h-full" />
         </div>
-        <div class="w-full lg:w-1/2 flex flex-col gap-10">
+        <div data-aos="fade-left" data-aos-duration="1200" class="w-full lg:w-1/2 flex flex-col gap-10">
           <h1 class="text-2xl font-bold text-[#2EC4B6]">Berkomitmen meningkatkan kesejahteraan mental dengan membantu individu terlepas dari kecanduan judi online di Indonesia</h1>
           <div class="flex flex-col gap-3">
             <h1 class="text-2xl font-bold">Visi</h1>
@@ -130,34 +141,34 @@
     </section>
 
     <section class="mt-28 flex flex-col items-center p-6">
-      <h1 class="text-3xl font-bold text-[#2EC4B6] text-center">Pendekatan Menyeluruh dalam Proses Pemulihan</h1>
+      <h1 data-aos="fade-down" data-aos-duration="1200" class="text-3xl font-bold text-[#2EC4B6] text-center">Pendekatan Menyeluruh dalam Proses Pemulihan</h1>
 
       <div class="w-full max-w-[1080px] mt-14 flex flex-wrap gap-5 justify-center">
-        <div class="card w-48 border-2 rounded-md flex flex-col gap-5 items-center p-5">
+        <div data-aos="fade-up" data-aos-duration="1200" class="card w-48 border-2 rounded-md flex flex-col gap-5 items-center p-5">
           <div class="rounded-full h-24 w-24">
             <img src="../assets/icon/games.png" alt="" class="w-full h-full" />
           </div>
           <p class="text-center font-bold">Games</p>
         </div>
-        <div class="card w-48 border-2 rounded-md flex flex-col gap-5 items-center p-5">
+        <div data-aos="fade-up" data-aos-duration="1200" data-aos-delay="100" class="card w-48 border-2 rounded-md flex flex-col gap-5 items-center p-5">
           <div class="rounded-full h-24 w-24">
             <img src="../assets/icon/exam.png" alt="" class="w-full h-full" />
           </div>
           <p class="text-center font-bold">Penilaian Diri</p>
         </div>
-        <div class="card w-48 border-2 rounded-md flex flex-col gap-5 items-center p-5">
+        <div data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200" class="card w-48 border-2 rounded-md flex flex-col gap-5 items-center p-5">
           <div class="rounded-full h-24 w-24">
             <img src="../assets/icon/people_alt.svg" alt="" class="w-full h-full" />
           </div>
           <p class="text-center font-bold">Komunitas</p>
         </div>
-        <div class="card w-48 border-2 rounded-md flex flex-col gap-5 items-center p-5">
+        <div data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300" class="card w-48 border-2 rounded-md flex flex-col gap-5 items-center p-5">
           <div class="rounded-full h-24 w-24">
             <img src="../assets/icon/open-book.png" alt="" class="w-full h-full" />
           </div>
           <p class="text-center font-bold">Membaca</p>
         </div>
-        <div class="card w-48 border-2 rounded-md flex flex-col gap-5 items-center p-5">
+        <div data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400" class="card w-48 border-2 rounded-md flex flex-col gap-5 items-center p-5">
           <div class="rounded-full h-24 w-24">
             <img src="../assets/icon/chat.png" alt="" class="w-full h-full" />
           </div>
@@ -233,11 +244,15 @@
       </div>
     </footer>
 
-    <a href="https://whatsapp.com" class="fixed right-4 bottom-4 w-20 h-20 bg-white rounded-full border-2 border-[#2EC4B6] flex justify-center items-center">
+    <a href="https://whatsapp.com" class="fixed right-4 bottom-4 w-20 h-20 bg-white rounded-full border-2 border-[#2EC4B6] flex justify-center items-center hover:scale-105 transition-all duration-300">
       <img src="../assets/icon/whatsapp.png" alt="" srcset="" class="w-10 h-10" />
     </a>
 
     <script src="../scripts/checkLogin.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

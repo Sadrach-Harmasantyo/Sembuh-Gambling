@@ -7,7 +7,7 @@ function populatePsikologSesuaiList(psikologData) {
     const psikolog = psikologData[i];
 
     const psikologCard = document.createElement("a");
-    psikologCard.classList.add("p-6", "border-2", "rounded-md", "flex", "flex-col", "gap-5", "lg:w-[500px]", "w-full");
+    psikologCard.classList.add("p-6", "border-2", "rounded-md", "flex", "flex-col", "gap-5", "lg:w-[500px]", "w-full", "hover:bg-slate-100", "transition-all", "duration-300");
     psikologCard.href = `detailPsikolog.html?id=${psikolog.id}`;
 
     psikologCard.innerHTML = `
@@ -77,7 +77,7 @@ function populatePsikologList(psikologData) {
               <p>${psikolog.pengalaman}</p>
             </div>
             <div class="w-full flex justify-center md:justify-end">
-              <a class="bg-[#2EC4B6] py-2 px-5 rounded-full text-white cursor-pointer font-semibold" href="detailPsikolog.html?id=${psikolog.id}">Selengkapnya</a>
+              <a class="bg-[#2EC4B6] py-2 px-5 rounded-full text-white cursor-pointer font-semibold border border-[#2EC4B6] hover:bg-white hover:text-[#2EC4B6] transition-all duration-300" href="detailPsikolog.html?id=${psikolog.id}">Selengkapnya</a>
             </div>
           </div>
         `;
