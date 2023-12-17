@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game</title>
+    <title>Peringkat</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="../assets/logo.png" />
@@ -68,22 +68,7 @@
         </a>
       </section>
 
-      <section id="games" class="order-2 lg:order-1 pt-10 lg:pt-24 flex flex-col items-center justify-center gap-10 w-full lg:w-3/5 pb-10">
-        <h1 class="font-bold text-4xl text-white">GameBling</h1>
-        <div class="flex gap-10 flex-wrap justify-center">
-          <a href="https://beinternetawesome.withgoogle.com/en_us/interland/landing/tower-of-treasure" target="_blank" class="w-80 rounded-lg bg-white overflow-hidden">
-            <img src="../assets/game-3.png" alt="" />
-          </a>
-          <a href="https://beinternetawesome.withgoogle.com/en_us/interland/landing/mindful-mountain" target="_blank" class="w-80 rounded-lg bg-white overflow-hidden">
-            <img src="../assets/game-2.png" alt="" />
-          </a>
-          <a href="https://beinternetawesome.withgoogle.com/en_us/interland/landing/reality-river" target="_blank" class="w-80 rounded-lg bg-white overflow-hidden">
-            <img src="../assets/game-1.png" alt="" />
-          </a>
-        </div>
-      </section>
-
-      <section id="peringkat" class="order-1 lg:order-2 w-full text-white lg:w-1/5 border-l border-[#2EC4B6] pt-24 lg:px-5 p-6">
+      <section id="peringkat" class="order-1 lg:order-2 w-full text-white border-l border-[#2EC4B6] pt-24 lg:px-5 p-6">
         <div class="relative overflow-x-auto rounded-lg">
           <table class="w-full text-sm text-left rtl:text-right text-white">
             <thead class="bg-white">
@@ -147,29 +132,6 @@
         </div>
       </div>
     </section>
-
-    <script>
-      const modal = document.getElementById("small-modal");
-      const login = document.getElementById("login");
-
-      const isLoggedIn = localStorage.getItem("login");
-      console.log(isLoggedIn);
-
-      if (isLoggedIn) {
-        // Pengguna sudah login, tampilkan tombol profil dan sembunyikan tombol login
-        console.log("sudah login");
-      } else {
-        // Pengguna belum login, tampilkan tombol login dan sembunyikan tombol profil
-        console.log("belum login");
-
-        modal.classList.remove("hidden");
-        modal.classList.add("flex");
-      }
-
-      login.addEventListener("click", () => {
-        window.location.assign("/pages/login.html");
-      });
-    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
   </body>
 </html>
