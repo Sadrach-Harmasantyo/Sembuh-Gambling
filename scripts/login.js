@@ -22,7 +22,7 @@ loginForm.addEventListener("submit", function (e) {
     }
   } else {
     // Tidak ada pengguna terdaftar
-    displayErrorMessage("Email atau kata sandi salah!");
+    displayErrorMessage("Anda belum terdaftar!");
   }
 });
 
